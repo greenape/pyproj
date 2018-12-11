@@ -126,6 +126,7 @@ packages          = ['pyproj']
 package_dirs       = {'':'lib'}
 
 setup(name = "pyproj",
+  setup_requires=["cython"],
   version = version,
   description = "Python interface to PROJ.4 library",
   long_description  = """
