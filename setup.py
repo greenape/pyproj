@@ -10,6 +10,11 @@ if not os.path.isfile("_proj.c"):
     # no _proj.c, repository
     USE_CYTHON = True
 
+if USE_CYTHON:
+    import subprocess
+    import sys
+    subprocess.call([sys.executable, "-m", "pip", "install", "cython"])
+    
 ext = '.pyx' if USE_CYTHON else '.c'
 
 proj_dir = os.environ.get('PROJ_DIR')
